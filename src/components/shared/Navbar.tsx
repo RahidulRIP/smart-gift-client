@@ -18,7 +18,6 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(true); // এটি পরে Auth দিয়ে রিপ্লেস করবেন
 
-  // স্ক্রল করলে শ্যাডো অ্যাড করার জন্য
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -45,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed w-full z-50 transition-all duration-300 bg-zinc-50 dark:bg-[#030712] ${
         isScrolled
           ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-lg py-3"
           : "bg-transparent py-5"
