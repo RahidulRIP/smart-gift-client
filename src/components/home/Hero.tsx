@@ -37,12 +37,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative  w-full flex items-center overflow-hidden pt-10">
+    <section className="relative  w-full flex items-center overflow-hidden pt-10 p-6">
       {/* Background Decor */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-500/10 via-transparent to-transparent blur-3xl" />
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-soft-light" />
-      </div>
+      </div> */}
 
       {/* Animated Background Decor */}
      
