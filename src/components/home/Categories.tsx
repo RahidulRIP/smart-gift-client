@@ -48,7 +48,7 @@ const Categories = () => {
               <span className="text-xs font-bold tracking-[0.3em] uppercase text-blue-600">Explore Collections</span>
             </div>
             <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-white">
-              Shop by <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Vibe.</span>
+              Shop by <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-600">Vibe.</span>
             </h2>
           </div>
           <p className="text-slate-500 dark:text-slate-400 max-w-xs text-sm font-medium leading-relaxed">
@@ -76,7 +76,7 @@ const Categories = () => {
                     className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110 group-hover:rotate-1"
                   />
                   {/* Overlay Gradient: Contextual color based on category */}
-                  <div className={`absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 group-hover:bg-gradient-to-br ${cat.accent} transition-all duration-500`} />
+                  <div className={`absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/20 to-transparent opacity-80 group-hover:opacity-90 group-hover:bg-linear-to-br ${cat.accent} transition-all duration-500`} />
                 </div>
 
                 {/* Content Layer */}
@@ -97,7 +97,7 @@ const Categories = () => {
                       {cat.name}
                     </h3>
                     {/* Hover revealed line */}
-                    <div className="w-0 group-hover:w-full h-[2px] bg-blue-600 transition-all duration-700" />
+                    <div className="w-0 group-hover:w-full h-0.5 bg-blue-600 transition-all duration-700" />
                   </div>
                 </div>
               </Link>

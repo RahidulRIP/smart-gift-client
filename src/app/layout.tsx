@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
+import AuthProvider from "@/providers/AuthProvider";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,15 +36,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300`}
       >
-        {/* Requirement 3: Navbar Setup */}
-        <Navbar />
+        
+         <AuthProvider>
+           <Navbar />
 
-        {/* Main Content Area */}
-        {/* pt-16 ensures content doesn't hide behind fixed navbar */}
-        <main className="grow pt-16">{children}</main>
+          <main className="grow pt-16">{children}</main>
 
-        {/* Requirement 3: Footer Setup */}
-        <Footer />
+          <Footer />
+         </AuthProvider>
+      
       </body>
     </html>
   );
